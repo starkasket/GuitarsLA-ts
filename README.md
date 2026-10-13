@@ -337,7 +337,7 @@ useEffect(() => {
 }, [cart]);
 ```
 
-No se observa el uso de `sessionStorage` ni de cookies para gestionar el carrito.
+No se hace uso de `sessionStorage` ni de cookies para gestionar el carrito.
 
 **Consideraciones técnicas**
 
@@ -361,6 +361,6 @@ La aplicación presenta diferentes estados relacionados con el catálogo y el ca
 |`loading`|No implementado. El catálogo se obtiene de un módulo local, sin una petición HTTP asíncrona visible.|
 |`error`|No implementado para la carga de productos ni para la recuperación del carrito. No se observa una gestión explícita de excepciones.|
 
-Dado que la información del catálogo procede de un módulo local, actualmente no es necesario implementar un estado de carga asociado a una petición HTTP. Si posteriormente se incorpora una API, se recomienda añadir estados explícitos de carga, error y éxito para informar al usuario sobre el resultado de cada operación.
+Dado que la información del catálogo procede de un módulo local, actualmente no es necesario implementar un estado de carga asociado a una petición HTTP. Si posteriormente se incorpora una API, se debería añadir estados explícitos de carga, error y éxito para informar al usuario sobre el resultado de cada operación.
 
-También se recomienda validar los datos recuperados de `localStorage` y manejar posibles errores de lectura o escritura, por ejemplo, cuando el contenido guardado es inválido o el navegador impide el acceso al almacenamiento.
+También se debería validar los datos recuperados de `localStorage` y manejar posibles errores de lectura o escritura, por ejemplo, cuando el contenido guardado es inválido o el navegador impide el acceso al almacenamiento.
