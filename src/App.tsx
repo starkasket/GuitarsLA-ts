@@ -2,12 +2,13 @@
 import Header from './components/Header';
 import Guitar from "./components/Guitar"
 import { useCart } from './hooks/useCart';
+import GuitarForm from './components/GuitarForm';
 
 
 function App() {
 
-    const { cart, data, addToCart, decreaseQuantity, increaseQuantity, removeFromCart, clearCart  } = useCart();
-  
+    const { cart, data, addToCart, addGuitar, decreaseQuantity, increaseQuantity, removeFromCart, clearCart } = useCart();
+
     // Inferencia es la determinación/predicción del tipo de dato quue tiene una variable
     // Types es el tipo de datos 
     // const {isActivity, setIsActivity} = useState();
@@ -26,6 +27,9 @@ function App() {
 
 
             <main className="container-xl mt-5">
+
+                <GuitarForm addGuitar={addGuitar} />
+
                 <h2 className="text-center">Nuestra Colección</h2>
 
                 <div className="row mt-5">

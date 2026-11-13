@@ -1,10 +1,6 @@
-type Guitar = {
+type Guitar = NewGuitar & {
     id: number;
-    name: string;
-    image: string;
-    description: string;
-    price: number;
-}
+};
 /* interface Guitar  {
     id: number;
     name: string;
@@ -31,7 +27,24 @@ type CartProps = {
     isEmpty: boolean, 
     cartTotal: number
 }
+type NewGuitar = {
+    name: string;
+    price: number;
+    description: string;
+    image: string;
+};
 
+
+type GuitarFormData = {
+    name: string;
+    price: number;
+    description: string;
+    image: string;
+};
+
+type GuitarFormProps = {
+    addGuitar: (guitar: GuitarFormData) => Promise<void>;
+};
 /* interface CartItem extends Guitar&{
     quantity: number
 } */

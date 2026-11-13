@@ -1,0 +1,122 @@
+
+.guitar-form-container {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.guitar-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.guitar-form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.guitar-form-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.guitar-form-header p {
+    color: #777;
+    font-size: 15px;
+}
+
+.guitar-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.guitar-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.guitar-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.guitar-form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.guitar-form-group input,
+.guitar-form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.guitar-form-group input:focus,
+.guitar-form-group textarea:focus {
+    border-color: #c58b45;
+    box-shadow: 0 0 0 3px rgba(197, 139, 69, 0.15);
+}
+
+.guitar-form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.guitar-form-hint {
+    color: #888;
+    font-size: 12px;
+}
+
+.guitar-form-error {
+    color: #dc3545;
+    background-color: #fff0f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.guitar-form-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #242424;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.guitar-form-button:hover {
+    background-color: #c58b45;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .guitar-form {
+        padding: 25px 20px;
+    }
+
+    .guitar-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guitar-form-group.full-width {
+        grid-column: auto;
+    }
+}
