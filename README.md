@@ -1,3 +1,90 @@
+Aplicación frontend de GuitarsLA, desarrollada con React, TypeScript y Vite. Consume la API REST del backend para consultar y registrar guitarras, además de gestionar el carrito de compras.
+
+## Tecnologías utilizadas
+
+- React 19
+    
+- TypeScript
+    
+- Vite
+    
+- CSS
+
+## Requisitos previos
+
+- Node.js
+    
+- npm
+    
+- Backend de GuitarsLA en ejecución.
+
+## Instalación
+
+1. Clonar el repositorio:
+
+```bash
+git clone URL_DEL_REPOSITORIO
+```
+
+2. Entrar a la carpeta del proyecto:
+
+```bash
+cd guitarsla-ts
+```
+
+3. Instalar las dependencias:
+
+```bash
+npm install
+```
+
+## Variables de entorno
+
+Crear un archivo `.env` en la raíz del proyecto, al mismo nivel que `package.json`.
+
+Agregar la siguiente variable:
+
+```env
+VITE_API_URL=http://localhost:4000/api
+```
+
+Esta variable indica la dirección base de la API REST del backend.
+
+**Importante:** El backend debe estar ejecutándose en el puerto 4000 para que el frontend pueda comunicarse con él.
+
+## Ejecutar el proyecto
+
+Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+Vite mostrará la dirección local donde se ejecuta la aplicación. Normalmente:
+
+```text
+http://localhost:5173
+```
+
+Abrir esa dirección en el navegador.
+
+## Otros comandos disponibles
+
+Construir la aplicación para producción:
+
+```bash
+npm run build
+```
+
+## Conexión con el backend
+
+El frontend realiza peticiones HTTP al backend mediante `fetch()`.
+
+La URL base se configura mediante la variable `VITE_API_URL` del archivo `.env`.
+
+
+
+
 
 ## 1. Visión General del Proyecto
 
